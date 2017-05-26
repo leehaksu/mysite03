@@ -9,7 +9,7 @@
 <head>
 <title>회원정보 수정</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite/assets/css/user.css" rel="stylesheet"
+<link href="${pageContext.servletContext.contextPath}/assets/css/user.css" rel="stylesheet"
 	type="text/css">
 </head>
 <body>
@@ -19,14 +19,12 @@
 		<div id="content">
 			<div id="user">
 				<form id="join-form" name="modifyform" method="post"
-					action="${pageContext.servletContext.contextPath}/user?">
-					<input type='hidden' name="a" value="modify" /> <label
-						class="block-label" for="name">이름</label> <input id="name"
-						name="name" type="text" value=""> <label
-						class="block-label" for="email">이메일</label> <label
-						class="block-albe" for="email">${email}</label> <label
-						class="block-label">패스워드</label> <input name="password"
-						type="password" value="">
+					action="${pageContext.servletContext.contextPath}/user/modify">
+					<label class="block-label" for="name">이름</label> 
+					<input id="name" name="name" type="text" value=""> 
+					<label class="block-label" for="email">이메일</label> 
+					<label class="block-albe" for="email">${email}</label> 
+					<label class="block-label">패스워드</label> <input name="password" type="password" value="">
 					<c:choose>
 						<c:when test="${gender==female}">
 							<fieldset>
